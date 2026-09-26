@@ -55,16 +55,16 @@ public final class Emulator {
         return PREVIEW.isEmpty() ? fallback : fallback + " " + PREVIEW;
     }
 
-    public static final String version = "Arcturus Morningstar Extended " + resolveVersionNumber();
+    public static final String version = "WM Core " + resolveVersionNumber();
     private static final String logo =
             "\n" +
-                    "███╗   ███╗ ██████╗ ██████╗ ███╗   ██╗██╗███╗   ██╗ ██████╗ ███████╗████████╗ █████╗ ██████╗ \n" +
-                    "████╗ ████║██╔═══██╗██╔══██╗████╗  ██║██║████╗  ██║██╔════╝ ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗\n" +
-                    "██╔████╔██║██║   ██║██████╔╝██╔██╗ ██║██║██╔██╗ ██║██║  ███╗███████╗   ██║   ███████║██████╔╝\n" +
-                    "██║╚██╔╝██║██║   ██║██╔══██╗██║╚██╗██║██║██║╚██╗██║██║   ██║╚════██║   ██║   ██╔══██║██╔══██╗\n" +
-                    "██║ ╚═╝ ██║╚██████╔╝██║  ██║██║ ╚████║██║██║ ╚████║╚██████╔╝███████║   ██║   ██║  ██║██║  ██║\n" +
-                    "╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝\n" +
-                    "Still Rocking in 2026.\n";
+                    "██╗    ██╗███╗   ███╗     ██████╗ ██████╗ ██████╗ ███████╗\n" +
+                    "██║    ██║████╗ ████║    ██╔════╝██╔═══██╗██╔══██╗██╔════╝\n" +
+                    "██║ █╗ ██║██╔████╔██║    ██║     ██║   ██║██████╔╝█████╗  \n" +
+                    "██║███╗██║██║╚██╔╝██║    ██║     ██║   ██║██╔══██╗██╔══╝  \n" +
+                    "╚███╔███╔╝██║ ╚═╝ ██║    ╚██████╗╚██████╔╝██║  ██║███████╗\n" +
+                    " ╚══╝╚══╝ ╚═╝     ╚═╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝\n" +
+                    "WM Core - 2026\n";
 
     public static String build = "";
     public static long buildTimestamp = -1L;
@@ -182,7 +182,7 @@ public final class Emulator {
             Emulator.rconServer.connect();
             Emulator.badgeImager = new BadgeImager();
 
-            LOGGER.info("Arcturus Morningstar has successfully loaded.");
+            LOGGER.info("WM Core has successfully loaded.");
             LOGGER.info("System launched in: {}ms. Using {} threads!", (System.nanoTime() - startTime) / 1e6, Runtime.getRuntime().availableProcessors() * 2);
             LOGGER.info("Memory: {}/{}MB", (runtime.totalMemory() - runtime.freeMemory()) / (1024 * 1024), (runtime.freeMemory()) / (1024 * 1024));
 
